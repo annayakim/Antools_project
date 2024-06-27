@@ -29,6 +29,12 @@ body {
   font-weight: 600;
   font-size: 16px;
   color: rgba(255, 255, 255, 0.78);
+  padding: 12px 28px;
+}
+.action-link:hover {
+  background-color: #ff6e30;
+  border-radius: 8px;
+  color: #fdf5ff;
 }
 
 /*========================MAIN===============================================*/
@@ -44,14 +50,30 @@ body {
 .hero-text {
   line-height: 1.67;
 }
+.hero-search {
+  background-color: #283036;
+  border-radius: 15px;
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  padding: 8px 11px 8px 18px;
+  max-width: 500px;
+  display: flex;
+  justify-content: space-between;
+}
 .search-input {
   font-size: 14px;
+  color: rgba(255, 255, 255, 0.38);
+  background-color: transparent;
+}
+.search-input::placeholder {
   color: rgba(255, 255, 255, 0.38);
 }
 .search-button {
   font-weight: 600;
   font-size: 16px;
   color: #fff;
+  padding: 12px 36px;
+  background-color: #ff6e30;
+  border-radius: 8px;
 }
 .tools-title {
   font-weight: 500;
@@ -76,10 +98,20 @@ body {
   font-size: 16px;
   line-height: 1.87;
 }
+.tool-link:hover {
+  background-color: #ff6e30;
+  border-radius: 8px;
+  padding: 9px 35px;
+}
 .tools-button {
   font-weight: 500;
   font-size: 20px;
   color: #ff6e30;
+}
+.tools-button:hover {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 17px 38px;
 }
 .partners-title {
   font-weight: 500;
@@ -99,6 +131,11 @@ body {
 .new-tool-link {
   font-weight: 500;
   color: #fff;
+}
+.new-tool-link:hover {
+  border-radius: 8px;
+  background: #ff6e30;
+  padding: 16px, 40px, 15px;
 }
 .about-text {
   font-family: var(--third-family);
@@ -122,5 +159,37 @@ body {
   font-size: 16px;
   color: #fff;
 }
+.subscribe-button:hover {
+  border-radius: 8px;
+  background-color: #ff6e30;
+  padding: 12px, 35px, 36px;
+}
 
 /*========================FOOTER===============================================*/
+.logo-footer-logo {
+  font-weight: 600;
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.9);
+}
+.info-copyright {
+  font-weight: 500;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+}
+.footer-info-text {
+  font-size: 14px;
+  line-height: 1.79;
+}
+.info-list-title {
+  font-weight: 500;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.9);
+}
+.info-item {
+  font-weight: 500;
+  font-size: 16px;
+}
+.info-list-wrapper {
+  font-weight: 500;
+  font-size: 16px;
+}

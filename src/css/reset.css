@@ -98,3 +98,8 @@ h6 {
   font-size: inherit;
   font-weight: inherit;
 }
+input,
+button {
+  outline: 0;
+  border: 0;
+}
