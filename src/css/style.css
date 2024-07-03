@@ -12,18 +12,50 @@ body {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
-  background-color: black;
+  background-color: #1e252b;
+}
+.container {
+  max-width: 1255px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 /*========================HEADER===============================================*/
+.header {
+  padding-top: 25px;
+  padding-bottom: 60px;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
 .logo-text {
   font-weight: 600;
   font-size: 22px;
   color: rgba(255, 255, 255, 0.9);
 }
+
 .nav-link {
   font-weight: 500;
   font-size: 16px;
+}
+.header-action {
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 .action-link {
   font-weight: 600;
@@ -38,17 +70,24 @@ body {
 }
 
 /*========================MAIN===============================================*/
+.hero {
+  padding-top: 45px;
+}
 .hero-title {
   font-weight: 500;
   font-size: 50px;
   line-height: 1.4;
   color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  margin-bottom: 30px;
 }
 .hero-title-decor {
   color: #ff6e30;
 }
 .hero-text {
   line-height: 1.67;
+  max-width: 485px;
+  margin-bottom: 60px;
 }
 .hero-search {
   background-color: #283036;
@@ -58,6 +97,7 @@ body {
   max-width: 500px;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 110px;
 }
 .search-input {
   font-size: 14px;
@@ -75,21 +115,52 @@ body {
   background-color: #ff6e30;
   border-radius: 8px;
 }
+.social-list {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.tools {
+  padding-top: 200px;
+}
 .tools-title {
   font-weight: 500;
   font-size: 48px;
   line-height: 1.3;
   color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  margin-bottom: 25px;
 }
 .tools-text {
   font-weight: 500;
-
   line-height: 1.67;
+  max-width: 425px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 110px;
+}
+.tools-list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 100px;
+  column-gap: 25px;
+}
+.tools-item {
+  flex-basis: calc((100% - 50px) / 3);
+}
+.tool {
+  padding: 33px;
+}
+.tool-top {
+  margin-bottom: 30px;
+  display: flex;
+  gap: 30px;
 }
 .tool-name {
   font-weight: 500;
   font-size: 24px;
   color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 3px;
 }
 .tool-license {
   color: rgba(255, 165, 55, 0.55);
@@ -97,32 +168,64 @@ body {
 .tool-text {
   font-size: 16px;
   line-height: 1.87;
+  margin-bottom: 30px;
+}
+.tool-link {
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 8px;
+  padding: 9px 35px;
 }
 .tool-link:hover {
   background-color: #ff6e30;
-  border-radius: 8px;
-  padding: 9px 35px;
+}
+.tool-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.tool-action {
+  padding: 7px;
+}
+.tool-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .tools-button {
   font-weight: 500;
   font-size: 20px;
   color: #ff6e30;
+  margin-bottom: 100px;
+  text-align: center;
+  background-color: #1e252b;
 }
 .tools-button:hover {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   padding: 17px 38px;
 }
+.partners {
+  padding-top: 200px;
+}
 .partners-title {
   font-weight: 500;
   font-size: 24px;
   color: rgba(255, 255, 255, 0.8);
+}
+.new-tools {
+  padding-top: 200px;
 }
 .new-tools-title {
   font-weight: 500;
   font-size: 48px;
   line-height: 1.3;
   color: rgba(255, 255, 255, 0.9);
+}
+.partners-list {
+  display: flex;
+  align-items: center;
+  gap: 107px;
 }
 .new-tools-text {
   font-weight: 500;
@@ -137,11 +240,18 @@ body {
   background: #ff6e30;
   padding: 16px, 40px, 15px;
 }
+.about {
+  padding-top: 200px;
+}
 .about-text {
   font-family: var(--third-family);
   font-size: 14px;
   line-height: 2.14;
   color: rgba(255, 255, 255, 0.78);
+}
+.contributor {
+  padding-top: 250px;
+  padding-bottom: 240px;
 }
 .contributor-title {
   font-weight: 500;
@@ -166,6 +276,10 @@ body {
 }
 
 /*========================FOOTER===============================================*/
+.footer {
+  padding-top: 70px;
+  padding-bottom: 100px;
+}
 .logo-footer-logo {
   font-weight: 600;
   font-size: 22px;
