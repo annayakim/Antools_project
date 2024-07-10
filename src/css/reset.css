@@ -103,3 +103,6 @@ button {
   outline: 0;
   border: 0;
 }
+address {
+  font-style: normal;
+}
