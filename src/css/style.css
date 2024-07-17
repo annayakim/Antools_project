@@ -52,6 +52,9 @@ body {
   font-weight: 500;
   font-size: 16px;
 }
+.nav-link:hover {
+  color: #fff;
+}
 .header-action {
   display: flex;
   align-items: center;
@@ -100,13 +103,21 @@ body {
   padding: 8px 11px 8px 18px;
   max-width: 500px;
   display: flex;
-  justify-content: space-between;
   margin-bottom: 110px;
+  align-items: center;
 }
+.hero-search::before {
+  content: "";
+  width: 25px;
+  height: 24px;
+  background-image: url(../img/icons/search.svg);
+}
+
 .search-input {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.38);
   background-color: transparent;
+  flex-grow: 1;
 }
 .search-input::placeholder {
   color: rgba(255, 255, 255, 0.38);
@@ -118,15 +129,25 @@ body {
   padding: 12px 36px;
   background-color: #ff6e30;
   border-radius: 8px;
+  border: solid 1px #ff6e30;
+}
+.search-button:hover {
+  color: rgb(255, 255, 255);
+
+  background-color: transparent;
 }
 .social-list {
   display: flex;
   align-items: center;
   gap: 30px;
 }
+.social-link:hover {
+  opacity: 0.8;
+}
 .tools {
   padding-top: 200px;
 }
+
 .tools-container {
   display: flex;
   flex-direction: column;
@@ -151,25 +172,40 @@ body {
   display: flex;
   flex-wrap: wrap;
   row-gap: 100px;
-  column-gap: 25px;
+  column-gap: 21px;
   margin-bottom: 100px;
-}
-.tools-list :hover {
-  background-color: rgb(40, 48, 54, 0.6);
-  background-image: radial-gradient(
-    at right top rgb(253, 173, 0),
-    rgb(235, 108, 0),
-    rgb(253, 210, 49)
-  );
 }
 
 .tools-item {
-  flex-basis: calc((100% - 50px) / 3);
+  flex-basis: calc((100% - 42px) / 3);
 }
 
 .tool {
   padding: 33px;
   border-radius: 15px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: transparent;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.tool:hover {
+  background-color: rgb(40, 48, 54, 0.6);
+  background-image: radial-gradient(
+    circle at right 40px top 10px,
+    rgb(255, 110, 48, 0.2) 5%,
+    rgb(44, 53, 61, 0.2) 20%
+  );
+  backdrop-filter: blur(50px);
+
+  border-image-source: linear-gradient(
+    to right,
+    rgb(44, 53, 61, 0.2),
+    rgb(44, 53, 61, 0)
+  );
+  border-image-slice: 1;
+  background-clip: padding-box;
+  transform: translateY(-15px);
 }
 .tool-top {
   margin-bottom: 30px;
@@ -196,9 +232,11 @@ body {
   font-size: 16px;
   border-radius: 8px;
   padding: 9px 35px;
+  color: rgb(255, 255, 255, 0.55);
 }
 .tool-link:hover {
   background-color: #ff6e30;
+  color: #fff;
 }
 .tool-actions {
   display: flex;
@@ -250,8 +288,26 @@ body {
 }
 .partners {
   padding-top: 200px;
-  background-color: rgb(44, 53, 61);
+}
+.partners-container {
+  background-color: rgb(44, 53, 61, 0.2);
   border-radius: 25px;
+  padding: 55px 80px;
+  background-image: radial-gradient(
+    circle at left top,
+    rgb(255, 72, 66, 0.4) 1%,
+    rgb(44, 53, 61, 0.2) 10%
+  );
+  backdrop-filter: blur(50px);
+  border-width: 2px;
+  border-style: solid;
+  border-image-source: linear-gradient(
+    to right,
+    rgb(44, 53, 61, 0.2),
+    rgb(44, 53, 61, 0)
+  );
+  border-image-slice: 1;
+  background-clip: padding-box;
 }
 .partners-title {
   font-weight: 500;
@@ -259,6 +315,13 @@ body {
   color: rgba(255, 255, 255, 0.8);
   text-align: center;
   margin-bottom: 55px;
+}
+.partners-link {
+  display: block;
+  transition: transform 0.5s ease;
+}
+.partners-link:hover {
+  transform: translateY(-15px);
 }
 .new-tools {
   padding-top: 200px;
@@ -328,16 +391,18 @@ body {
   line-height: 2.14;
   color: rgba(255, 255, 255, 0.78);
   max-width: 440px;
+  gap: 27px;
+  background-image: url(../img/logo/quotes.svg);
+  background-repeat: no-repeat;
+  background-position: left top;
+  padding-left: 45px;
+  padding-top: 50px;
 }
 .about-photo {
   padding-left: 45px;
   padding-top: 25px;
   display: flex;
   flex-direction: column;
-  gap: 27px;
-  background-image: url(../img/logo/quotes.svg);
-  background-repeat: no-repeat;
-  background-position: right top;
 }
 .contributor {
   padding-top: 250px;
@@ -384,21 +449,21 @@ body {
   padding: 12px 36px;
   background-color: #ff6e30;
   border-radius: 8px;
+  border: #ff6e30 solid 1px;
 }
 .subscribe-button:hover {
+  background-color: transparent;
 }
 
 /*========================FOOTER===============================================*/
 .footer {
   padding-top: 70px;
   padding-bottom: 100px;
+  border: 0.5px solid rgba(255, 255, 255, 0.15);
 }
 .footer-container {
   display: flex;
   gap: 160px;
-  border: 0.5px solid rgba(255, 255, 255, 0.15);
-  width: 1440px;
-  height: 0px;
 }
 .logo-footer-logo {
   font-weight: 600;
@@ -406,12 +471,14 @@ body {
   color: rgba(255, 255, 255, 0.9);
   display: block;
   margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 .antool-logo {
   border-radius: 8px;
   width: 38px;
   height: 38px;
-  flex-direction: row-reverse;
 }
 .info-copyright {
   font-weight: 500;
@@ -424,6 +491,7 @@ body {
   line-height: 1.79;
   max-width: 260px;
 }
+
 .footer-info-lists {
   display: flex;
   gap: 115px;
@@ -442,6 +510,9 @@ body {
 .info-item {
   font-weight: 500;
   font-size: 16px;
+}
+.info-item:hover {
+  color: #fff;
 }
 .info-list-wrapper {
   font-weight: 500;
